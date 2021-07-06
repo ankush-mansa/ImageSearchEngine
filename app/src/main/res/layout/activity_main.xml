@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nested_scroll_view"
+    tools:context=".activities.MainActivity">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <EditText
+          android:drawableRight="@drawable/ic_baseline_youtube_searched_for_24"
+          android:padding="5dp"
+          android:layout_margin="10dp"
+          android:hint="Type to Search"
+          android:textColor="#FF6200EE"
+          android:background="@drawable/search_input_background"
+          android:id="@+id/edit_text_search"
+          android:layout_width="match_parent"
+          android:layout_height="50dp">
+
+      </EditText>
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/recycler_view_image_list"
+          tools:listitem="@layout/image_tile"
+          />
+
+      <ProgressBar
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:id="@+id/progress_bar_loading"
+          />
+  </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
